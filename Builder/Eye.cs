@@ -4,7 +4,7 @@ namespace Builder
 {
     public class Eye
     {
-        public Eye(ConsoleColor color)
+        internal Eye(ConsoleColor color)
         {
             Color = color;
         }

@@ -8,10 +8,12 @@ namespace Builder
         {
             var b = new PersonBuilder("Jirka Batulka")
                 .WithBirthDay(new DateTime(2020, 01, 01))
-                .WithLeftEye(new EyeBuilder(ConsoleColor.Cyan).SetName("Favourite left eye"))
+                .WithLeftEye(ConsoleColor.Blue, eyeBuilder => eyeBuilder.SetName("test"))
                 .WithRithEye(ConsoleColor.Blue);
 
             var person = b.Build;
+
+
 
             Console.WriteLine(person);
 

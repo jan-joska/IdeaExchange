@@ -4,7 +4,7 @@ namespace Builder
 {
     public class Person
     {
-        public Person(string name)
+        internal Person(string name)
         {
             Name = name;
         }

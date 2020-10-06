@@ -18,8 +18,10 @@ namespace Builder
             return this;
         }
 
-        public PersonBuilder WithLeftEye(EyeBuilder eyeBuilder)
+        public PersonBuilder WithLeftEye(ConsoleColor color, Action<EyeBuilder> eyeBuilderFunc)
         {
+            var eyeBuilder = new EyeBuilder(color);
+            eyeBuilderFunc.Invoke(eyeBuilder);
             Build.LeftEye = eyeBuilder.Build();
 
             return this;
