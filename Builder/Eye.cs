@@ -15,7 +15,7 @@ namespace Builder
 
         public override string ToString()
         {
-            return $"{nameof(Color)}: {Color}, {nameof(Name)}: {Name}";
+            return Color.ToString();
         }
     }
 }
